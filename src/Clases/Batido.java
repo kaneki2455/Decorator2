@@ -1,4 +1,5 @@
 package Clases;
+
 public class Batido extends Cafe {
 
     public Batido() {

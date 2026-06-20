@@ -1,8 +1,9 @@
 package Clases;
+
 public class leche extends DecoradorComplemento {
     Cafe bebida;
 
-    public Leche(Cafe bebida) {
+    public leche(Cafe bebida) {
         this.bebida = bebida;
     }
 
