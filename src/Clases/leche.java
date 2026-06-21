@@ -1,10 +1,11 @@
 package Clases;
 
 public class leche extends DecoradorComplemento {
-    Cafe bebida;
+    private Cafe bebida;
 
     public leche(Cafe bebida) {
         this.bebida = bebida;
+        setTamaño(bebida.getTamaño());
     }
 
     public String getDescripcion() {
@@ -12,6 +13,16 @@ public class leche extends DecoradorComplemento {
     }
 
     public double costo() {
-        return 0.10 + bebida.costo();
+        double precioLeche;
+        if (bebida.getTamaño().equals("N")) {
+            precioLeche = 0.10;
+        } else if (bebida.getTamaño().equals("M")) {
+            precioLeche = 0.15;
+        } else if (bebida.getTamaño().equals("G")) {
+            precioLeche = 0.20;
+        } else {
+            precioLeche = 0.10;
+        }
+        return precioLeche + bebida.costo();
     }
 }
