@@ -1,4 +1,4 @@
-package Runiable;
+package Runeable;
 
 import java.util.Scanner;
 
